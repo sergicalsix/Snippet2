@@ -19,10 +19,9 @@
       <tbody>
         {% for one_snippet in snippet %}
         <tr>
-          <th>hoge</th>
-          <!--<th>{{ one_snippet.created_by.username}}</th>--->
+          <th>{{ one_snippet.created_by.username}}</th>
           <th>{{ one_snippet.created_at}}</th>
-          <th><a href="{% url 'snippet_detail' one_snippet.id % }"> {{one_snippet.title}}</a>></th>
+          <th><a href="/snippet/{{one_snippet.id}}/"> {{one_snippet.id }}</a></th>
         </tr>
       </tbody>
       {% endfor %}
